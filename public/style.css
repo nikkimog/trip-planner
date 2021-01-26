@@ -5,10 +5,63 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #C1B5AD;
+  background-color: #c1b5ad;
+}
+
+#navbar {
+  background-color: red;
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  left: 0px;
+  z-index: 2;
+}
+
+#content {
+  z-index: 1;
+  display: flex;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33%;
+}
+
+#adding {
+  background-color: lightblue;
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 20px;
+}
+
+#itinerary {
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  flex-basis: 80%;
+  margin: 20px;
+  padding: 15px;
+}
+
+#itinerary_nav_bar {
+  background-color: #ffff99;
+  flex-basis: 20%;
+  padding: 15px;
 }
 
 #map {
   height: 100vh;
   width: 100vw;
+}
+
+@media (max-width: 600px) {
+  #adding {
+    padding-top: 5px;
+  }
+  #content {
+    flex-direction: column;
+  }
 }
